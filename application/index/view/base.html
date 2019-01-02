@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; Charset=gb2312">
+    <meta http-equiv="Content-Language" content="zh-CN">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>沫缘</title>
+    <link rel="shortcut icon" href="__STATIC__/images/Logo_40.png" type="image/x-icon">
+    <!--Layui-->
+    <link href="__STATIC__/plug/layui/css/layui.css" rel="stylesheet" />
+    <!--font-awesome-->
+    <link href="__STATIC__/plug/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <!--全局样式表-->
+    <link href="__STATIC__/css/global.css" rel="stylesheet" />
+    <!-- 本页样式表 -->
+    <link rel="stylesheet" href="__STATIC__/css/player.css">
+    {block name="css"}{/block}
+</head>
+    <style type="text/css">
+        @font-face {
+         font-family: 'qwe';
+         src: url('qwe.eot');
+         src: local('qwe Regular'),
+                local('qwe'),
+                url('qwe.woff') format('woff'),
+                url('__STATIC__/font/qwe.ttf') format('truetype'),
+                url('qwe.svg#qwe') format('svg');
+        }
+        .zimomo{
+            font-family: qwe;
+        } 
+    </style>
+</head>
+<body>
+        {block name="body"}{/block}
+        <!-- 底部 -->
+    <footer class="blog-footer">
+        <p><span>Copyright</span><span>&copy;</span><span>2017</span><a href="http://www.lyblogs.cn">沫缘</a><span>Design By Zimomo</span></p>
+        <p><a href="http://www.miibeian.gov.cn/" target="_blank">鲁ICP备1215138606号-1</a></p>
+    </footer>
+    <!--侧边导航-->
+    <ul class="layui-nav layui-nav-tree layui-nav-side blog-nav-left layui-hide" lay-filter="nav">
+        <li class="layui-nav-item">
+            <a href="/index/index/index.html"><i class="fa fa-home fa-fw"></i>&nbsp;网站首页</a>
+        </li>
+        <li class="layui-nav-item layui-this">
+            <a href="/index/article/article.html"><i class="fa fa-file-text fa-fw"></i>&nbsp;文章专栏</a>
+        </li>
+        <li class="layui-nav-item">
+            <a href="/index/resource/resource.html"><i class="fa fa-tags fa-fw"></i>&nbsp;资源分享</a>
+        </li>
+        <li class="layui-nav-item">
+            <a href="/index/timeline/timeline.html"><i class="fa fa-road fa-fw"></i>&nbsp;点点滴滴</a>
+        </li>
+        <li class="layui-nav-item">
+            <a href="/index/about/about.html"><i class="fa fa-info fa-fw"></i>&nbsp;关于本站</a>
+        </li>
+        <li class="layui-nav-item">
+            <a href="/index/photo/photo.html"><i class="fa fa-info fa-fw"></i>&nbsp;我的相册</a>
+        </li>
+    </ul>
+
+	<!--遮罩-->
+    <div class="blog-mask animated layui-hide"></div>
+    <!-- layui.js -->
+    <script src="__STATIC__/plug/layui/layui.js"></script>
+    <!-- 全局脚本 -->
+    <script src="__STATIC__/js/global.js"></script>
+    
+    <!--分享窗体-->
+    <div class="blog-share layui-hide">
+        <div class="blog-share-body">
+            <div style="width: 200px;height:100%;">
+                <div class="bdsharebuttonbox">
+                    <a class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                    <a class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                    <a class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                    <a class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- 音乐插件 -->
+    <div id="QPlayer">
+        <div id="pContent">
+            <div id="player">
+                <span class="cover"></span>
+                <div class="ctrl">
+                    <div class="musicTag marquee">
+                        <strong>Title</strong>
+                         <span> - </span>
+                        <span class="artist">Artist</span>
+                    </div>
+                    <div class="progress">
+                        <div class="timer left">0:00</div>
+                        <div class="contr">
+                            <div class="rewind icon"></div>
+                            <div class="playback icon"></div>
+                            <div class="fastforward icon"></div>
+                        </div>
+                        <div class="right">
+                            <div class="liebiao icon"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ssBtn">
+                    <div class="adf"></div>
+            </div>
+        </div>
+        <ol id="playlist"></ol>
+        </div>
+
+        <script src="__STATIC__/js/jquery.min.js"></script>
+        <script src="__STATIC__/js/jquery.marquee.min.js"></script>
+
+        <script>
+            var playlist = [
+        {title:"再也没有",artist:"Mark Ronson",mp3:"__STATIC__/music/再也没有.mp3",cover:"http://p4.music.126.net/G2nCsXpMc81lcUY-pOHr9Q==/2528876745541310.jpg?param=106x106",},
+        {title:"到不了",artist:"Mark Ronson",mp3:"__STATIC__/music/到不了.mp3",cover:"http://p4.music.126.net/G2nCsXpMc81lcUY-pOHr9Q==/2528876745541310.jpg?param=106x106",},
+        {title:"启程",artist:"Mark Ronson",mp3:"__STATIC__/music/启程.mp3",cover:"http://p4.music.126.net/G2nCsXpMc81lcUY-pOHr9Q==/2528876745541310.jpg?param=106x106",},
+        ];
+          var isRotate = true;
+          var autoplay = true;
+        </script>
+        <script src="__STATIC__/js/player.js"></script>
+        <script>
+
+        function bgChange(){
+            var lis= $('.lib');
+            for(var i=0; i<lis.length; i+=2)
+            lis[i].style.background = 'rgba(246, 246, 246, 0.5)';
+        }
+        window.onload = bgChange;
+        </script>
+
+        {block name="js"}{/block}
+<!--页面JS脚本-->
+{block name="script"}{/block}
+</body>
+</html>
